@@ -1,0 +1,71 @@
+@import "./colorSchema.scss";
+
+.modal{
+  &__background{
+    background: transparentize($dark-blue, .5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  &__container{
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__header{
+    background-color: $main-blue;
+    padding: 15px;
+    h3{
+      color: white;
+      margin-block: 0;
+      font-weight: normal;
+      text-align: center;
+      line-height: 140%;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+  &__actions{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__button{
+    &--cancel{
+      color: $dark-blue;
+      font-size: 16px;
+      height: 40px;
+      width: 120px;
+      border: none;
+      background: none;
+      border-radius: 5px;
+      &:hover{
+        color: lighten($dark-blue, 30%)
+      }
+    }
+    &--accept{
+      color: white;
+      background: $main-red;
+      height: 40px;
+      width: 120px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      &:hover{
+        background-color: lighten($main-red, 10%)
+      }
+    }
+  }
+}

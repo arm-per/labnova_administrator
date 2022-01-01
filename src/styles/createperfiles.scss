@@ -1,0 +1,149 @@
+@import "./colorSchema";
+
+.blur{
+  background-color: transparentize($dark-blue, .3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.createperfil__container{
+  background-color: white;
+  border-radius: 10px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.createperfil__header{
+  background-color: $main-blue;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3{
+    margin-block: 0;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.createperfil__inputcontainer{
+  padding: 15px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  span{
+    display: block;
+    label{
+      display: block;
+      margin-bottom: 5px;
+      color: $main-blue;
+    }
+    input, textarea{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: $dark-blue 1px solid;
+      font-size: 16px;
+      font-family: sans-serif;
+      padding-inline: 10px;
+      resize: none;
+      background-color: $light-dark;
+      &::placeholder{
+        color: $main-blue;
+      }
+    }
+
+    input{
+      height: 40px;
+    }
+    textarea{
+      height: 80px;
+      padding-block: 10px;
+    }
+  }
+  .col-2{
+    grid-column-start:1;
+    grid-column-end: 3;
+  }
+}
+
+.createperfil__labs{
+  margin-bottom: 5px;
+  &:disabled{
+    background-color: #ddd;
+    color: #444;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+}
+
+.editperfil__labs{
+  display: flex;
+  gap: 10px;
+  button{
+    margin-bottom: 5px;
+    width: 40px;
+    border-radius: 5px;
+    border: 0;
+    background-color: $main-red;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    &:hover{
+      background-color: lighten($main-red, 10%);
+    }
+  }
+}
+
+.createperfil__addlab{
+  background-color: $main-blue;
+  color: white;
+  font-size: 14px;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  &:hover{
+    background-color: lighten($main-blue, 10%)
+  }
+}
+
+.createperfil__buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  button{
+    &:first-child{
+      color: $main-red;
+      font-size: 16px;
+      border: none; background: none;
+      height: 40px;
+      width: 120px;
+      &:hover{
+        color: lighten($main-red, 20%);
+      }
+    }
+    &:last-child{
+      background-color: $main-green;
+      height: 40px;
+      width: 120px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: white;
+      &:hover{
+        background-color: lighten($main-green, 5%);
+      }
+    }
+  }
+}

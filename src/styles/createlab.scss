@@ -1,0 +1,155 @@
+@import "./colorSchema.scss";
+
+.blur{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #04243Cdd;
+  backdrop-filter: blur(40%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  z-index: 1000;
+
+}
+
+.createlab-container{
+  background-color: $white;
+  width: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: fixed;
+  left: calc(50% - 250px);
+  top: calc(50% - 118px)
+}
+
+.createlab-header{
+  background-color: $main-blue;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  h3{
+    margin-block: 0;
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+.createlab-form{
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  grid-template-columns: 2fr 1fr;
+  label{
+    color: $light-blue;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  input{
+    padding-inline: 10px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid $light-blue;
+    box-sizing: border-box;
+    background-color: $light-dark;
+    width: 100%;
+    display: block;
+    &::placeholder{
+      color: $light-blue;
+    }
+  }
+  span{
+    display: block;
+    width: 100%;
+  }
+  textarea{
+    border: 1px solid $light-blue;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-inline: 10px;
+    padding-block: 10px;
+    height: 80px;
+    resize: none;
+    font-family: sans-serif;
+    background-color: $light-dark;
+    width: 100%;
+    box-sizing: border-box;
+    &::placeholder{
+      color: $light-blue;
+    }
+  }
+  .span-2{
+    grid-column: span 2;
+
+  }
+  div{
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    button:last-child{
+      background-color: $main-green;
+      color: white;
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      font-size: 16px;
+      &:disabled{
+        background-color: gray;
+      }
+    }
+    button:first-child{
+      background-color: $main-red;
+      color: white;
+      width: 100px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 8px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  .createlab-container{
+    background-color: $dark-blue-dark;
+  }
+  .createlab-header{
+    background-color: $main-blue-dark;
+    h3{
+      color: $light-dark;
+    }
+  }
+  .createlab-form{
+    input{
+      background-color: $light-blue-dark;
+      color: white;
+      &::placeholder{
+        color: $light-dark
+      }
+    }
+    label{
+      color: white;
+    }
+    textarea{
+      background-color: $light-blue-dark;
+      color: white;
+      &::placeholder{
+        color: $light-dark
+      }
+    }
+  }
+}

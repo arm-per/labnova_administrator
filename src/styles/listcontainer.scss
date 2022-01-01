@@ -1,0 +1,14 @@
+.listcontainer{
+  padding-inline: 50px;
+  padding-block: 20px;
+  display: grid;
+  gap: 5px;
+  & > div:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  & > div:last-child{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}

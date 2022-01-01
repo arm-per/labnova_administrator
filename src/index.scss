@@ -1,0 +1,21 @@
+@import "./styles/_colorSchema.scss";
+:root{
+  font-family: sans-serif;
+}
+
+body{
+  margin: 0;
+  background-color: $main-bg;
+}
+
+button{
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: $main-bg-dark;
+    color: white;
+  }
+
+}
